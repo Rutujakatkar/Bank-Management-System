@@ -22,7 +22,6 @@ public:
 	int Return_Account_Number() const;	//function to return account number
 	int Return_Deposit_Amount() const;	//function to return balance amount
 	char Return_type() const;	//function to return type of account
-	void Loan(); //function to request for a loan
 };         
  
  
@@ -123,8 +122,7 @@ int main()
 		cout<<"\n\t\t5. ALL ACCOUNT HOLDER LIST";
 		cout<<"\n\t\t6. CLOSE AN ACCOUNT";
 		cout<<"\n\t\t7. Update AN ACCOUNT";
-		cout<<"\n\t\t8. Loan";
-		cout<<"\n\t\t9. EXIT";
+		cout<<"\n\t\t8. EXIT";
         cout<<"\n";
 		cout<<"\n\t\tSelect Your Option (1-8):--> ";
 		cin>>ch;
@@ -158,31 +156,16 @@ int main()
 			Update_account(num);
 			break;
 		case '8' :
-			//Loan();
-			Loan();
+			cout<<"n\t\t************ Thanks for using bank managemnt system *************";
 			break;
-		case '9' :
-			cout<<"n\t\tThanks for using bank managemnt system";
 		 default :cout<<"Invalid Choice";
 		}
 		cin.ignore();
 		cin.get();
-	}while(ch!='9');
+	}while(ch!='8');
 	return 0;
 }
 
-//function to do enquiry for loan
-void account::Loan()
-{
-	int age,cre_score;
-	if(age>=21&&age<=60)
-	{
-		if(cre_score>=750)
-			cout<<"\n Loan Approved...";
-		else
-			cout<<"\n Loan rejected.";
-	}
-} 
 //function to write in file
  
 void write_account()
